@@ -7,7 +7,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: $ff;
+  
 }
 
 /* Remove default margin */
@@ -81,7 +81,11 @@ select {
 // variable 
 $ff : 'Poppins', sans-serif; 
 $primary-clr : hsl(240, 97%, 65%);
-$primary-accent-clr: royalblue;
+$primary-accent-clr: hsl(240, 100%, 73%);
+
+*{
+  font-family: $ff;
+}
 
 @mixin flexBox {
     display: flex;
@@ -101,7 +105,50 @@ body{
     border-radius: 1.6rem;
     background-color: #fff;
     .img-container{
-        row-gap: 0.3rem;
+        row-gap: 0.2rem;
+        position: relative;
+       
+        .overlay{
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          background-color: $primary-clr;
+          border-radius: 1.6rem 1.6rem 0 1.6rem;
+          &::before{
+            content: '';
+            position: absolute;
+            height: 2rem;
+            width: 2rem;
+            background-color: $primary-clr;
+            right: 0;
+            bottom: -2rem;
+            clip-path: polygon(50% 0%, 100% 43%, 100% 0);            
+          }
+        }
+        .card-image{
+          position: relative;
+          height: 9.1rem;
+          width: 9.1rem;
+          border-radius: 50%;
+          padding: 0.1em;
+          background: #fff;
+          
+          .img{
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+              border-radius: 50%;
+              border: 0.3rem solid $primary-clr;
+              transition: all 1s ease;
+              cursor: pointer;
+              &:hover{
+                transform: scale(1.1);
+                width: 100%;
+              }
+              }
+          }
     }
     .img-container,
     .content-cotainer{
@@ -126,30 +173,16 @@ body{
             border: none;
             padding: 0.5em 1em;
             margin: 0.9rem;
-            border-radius: 0.5rem;
+            border-radius: 0rem;
             cursor: pointer;
-            transition: all 0.1s ease-in-out;
+            transition: all 0.5s ease-in-out;
             &:hover,
             &:focus{
-                transform: scale(1.1);
-                background-color: $primary-clr;
+              border-radius:0.5rem;
+              background-color: $primary-clr;
             }
         }
-        .card-image{
-            position: relative;
-            height: 9.1rem;
-            width: 9.1rem;
-            border-radius: 50%;
-            padding: 0.1em;
-            background: #fff;
-            .img{
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-                border-radius: 50%;
-                border: 0.2rem solid $primary-clr;
-                }
-            }
+       
     }
 }
 

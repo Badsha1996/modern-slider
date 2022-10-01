@@ -79,6 +79,10 @@ select {
   }
 }
 /* ============================================================ */
+* {
+  font-family: "Poppins", sans-serif;
+}
+
 body {
   background-color: rgb(194, 194, 194);
   display: flex;
@@ -96,7 +100,50 @@ body {
   background-color: #fff;
 }
 .card .img-container {
-  row-gap: 0.3rem;
+  row-gap: 0.2rem;
+  position: relative;
+}
+.card .img-container .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: hsl(240deg, 97%, 65%);
+  border-radius: 1.6rem 1.6rem 0 1.6rem;
+}
+.card .img-container .overlay::before {
+  content: "";
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  background-color: hsl(240deg, 97%, 65%);
+  right: 0;
+  bottom: -2rem;
+  -webkit-clip-path: polygon(50% 0%, 100% 43%, 100% 0);
+          clip-path: polygon(50% 0%, 100% 43%, 100% 0);
+}
+.card .img-container .card-image {
+  position: relative;
+  height: 9.1rem;
+  width: 9.1rem;
+  border-radius: 50%;
+  padding: 0.1em;
+  background: #fff;
+}
+.card .img-container .card-image .img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 0.3rem solid hsl(240deg, 97%, 65%);
+  transition: all 1s ease;
+  cursor: pointer;
+}
+.card .img-container .card-image .img:hover {
+  transform: scale(1.1);
+  width: 100%;
 }
 .card .img-container,
 .card .content-cotainer {
@@ -121,37 +168,19 @@ body {
 }
 .card .img-container .button,
 .card .content-cotainer .button {
-  background-color: royalblue;
+  background-color: hsl(240deg, 100%, 73%);
   color: #eee;
   font-size: 1rem;
   border: none;
   padding: 0.5em 1em;
   margin: 0.9rem;
-  border-radius: 0.5rem;
+  border-radius: 0rem;
   cursor: pointer;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .card .img-container .button:hover, .card .img-container .button:focus,
 .card .content-cotainer .button:hover,
 .card .content-cotainer .button:focus {
-  transform: scale(1.1);
+  border-radius: 0.5rem;
   background-color: hsl(240deg, 97%, 65%);
-}
-.card .img-container .card-image,
-.card .content-cotainer .card-image {
-  position: relative;
-  height: 9.1rem;
-  width: 9.1rem;
-  border-radius: 50%;
-  padding: 0.1em;
-  background: #fff;
-}
-.card .img-container .card-image .img,
-.card .content-cotainer .card-image .img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 50%;
-  border: 0.2rem solid hsl(240deg, 97%, 65%);
 }/*# sourceMappingURL=main.css.map */
