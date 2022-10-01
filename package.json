@@ -1,0 +1,30 @@
+{
+  "name": "modern-slider",
+  "version": "1.0.0",
+  "description": "A slider that is  fully responsive and has modern feature with edge cutting tech. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Badsha1996/modern-slider.git"
+  },
+  "keywords": [
+    "slider",
+    "caraousal",
+    "frontend",
+    "css",
+    "edge-cutting",
+    "webdev"
+  ],
+  "author": "Badsha Laskar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Badsha1996/modern-slider/issues"
+  },
+  "homepage": "",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}

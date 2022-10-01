@@ -1,0 +1,157 @@
+/* ====================================================
+                      CSS RESETS
+=======================================================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* ============================================================ */
+body {
+  background-color: rgb(194, 194, 194);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  margin: 0 2.1rem;
+}
+
+.card {
+  width: 20rem;
+  border-radius: 1.6rem;
+  background-color: #fff;
+}
+.card .img-container {
+  row-gap: 0.3rem;
+}
+.card .img-container,
+.card .content-cotainer {
+  padding: 0.7em 0.9em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card .img-container .profile-name,
+.card .content-cotainer .profile-name {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgb(61, 36, 20);
+}
+.card .img-container .description,
+.card .content-cotainer .description {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: black;
+}
+.card .img-container .button,
+.card .content-cotainer .button {
+  background-color: royalblue;
+  color: #eee;
+  font-size: 1rem;
+  border: none;
+  padding: 0.5em 1em;
+  margin: 0.9rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.card .img-container .button:hover, .card .img-container .button:focus,
+.card .content-cotainer .button:hover,
+.card .content-cotainer .button:focus {
+  transform: scale(1.1);
+  background-color: hsl(240deg, 97%, 65%);
+}
+.card .img-container .card-image,
+.card .content-cotainer .card-image {
+  position: relative;
+  height: 9.1rem;
+  width: 9.1rem;
+  border-radius: 50%;
+  padding: 0.1em;
+  background: #fff;
+}
+.card .img-container .card-image .img,
+.card .content-cotainer .card-image .img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 0.2rem solid hsl(240deg, 97%, 65%);
+}/*# sourceMappingURL=main.css.map */
