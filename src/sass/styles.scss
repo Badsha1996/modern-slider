@@ -124,7 +124,7 @@ body{
             width: 2rem;
             background-color: $primary-clr;
             right: 0;
-            bottom: -2rem;
+            bottom: -1.9rem;
             clip-path: polygon(50% 0%, 100% 43%, 100% 0);            
           }
         }
@@ -148,7 +148,7 @@ body{
               cursor: pointer;
               &:hover{
                 transform: scale(1.05);
-                border-color: $primary-accent-clr;
+                border-color: #eeee;
               }
             }
           }
