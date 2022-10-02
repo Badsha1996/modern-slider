@@ -81,21 +81,22 @@ select {
 // variable 
 $ff : 'Poppins', sans-serif; 
 $primary-clr : hsl(240, 97%, 65%);
-$primary-accent-clr: hsl(240, 100%, 73%);
+$primary-accent-clr: hsl(219, 100%, 73%);
 
 *{
   font-family: $ff;
 }
 
-@mixin flexBox {
+@mixin flexBox ($grid-type){
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: $grid-type;
 }
 
 body{
     background-color: rgb(194, 194, 194);
-    @include flexBox()
+    @include flexBox(row)
 }
 .content{
     margin: 0 2.1rem;
@@ -135,26 +136,27 @@ body{
           padding: 0.1em;
           background: #fff;
           
+          
           .img{
               height: 100%;
               width: 100%;
               object-fit: cover;
+              object-position: center;
               border-radius: 50%;
               border: 0.3rem solid $primary-clr;
-              transition: all 1s ease;
+              transition: all 0.3s ease;
               cursor: pointer;
               &:hover{
-                transform: scale(1.1);
-                width: 100%;
+                transform: scale(1.05);
+                border-color: $primary-accent-clr;
               }
-              }
+            }
           }
     }
     .img-container,
     .content-cotainer{
         padding: 0.7em 0.9em;
-        @include flexBox();
-        flex-direction: column;
+        @include flexBox(column);
         .profile-name{
             font-size: 1.2rem;
             font-weight: 500;
@@ -168,7 +170,7 @@ body{
         }
         .button{
             background-color: $primary-accent-clr;
-            color: #eee;
+            color: #000;
             font-size: 1rem;
             border: none;
             padding: 0.5em 1em;
@@ -178,8 +180,8 @@ body{
             transition: all 0.5s ease-in-out;
             &:hover,
             &:focus{
-              border-radius:0.5rem;
               background-color: $primary-clr;
+              color: #eee;
             }
         }
        
