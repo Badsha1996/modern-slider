@@ -42,6 +42,7 @@ body {
   line-height: 1.5;
 }
 
+
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
@@ -105,11 +106,11 @@ body{
     width: 20rem;
     border-radius: 1.6rem;
     background-color: #fff;
-    .img-container{
+    &__image{
         row-gap: 0.2rem;
         position: relative;
        
-        .overlay{
+        #{&}__overlay{
           position: absolute;
           height: 100%;
           width: 100%;
@@ -128,7 +129,7 @@ body{
             clip-path: polygon(50% 0%, 100% 43%, 100% 0);            
           }
         }
-        .card-image{
+        #{&}__container{
           position: relative;
           height: 9.1rem;
           width: 9.1rem;
@@ -137,7 +138,7 @@ body{
           background: #fff;
           
           
-          .img{
+          .image{
               height: 100%;
               width: 100%;
               object-fit: cover;
@@ -153,8 +154,8 @@ body{
             }
           }
     }
-    .img-container,
-    .content-cotainer{
+    &__image,
+    &__content{
         padding: 0.7em 0.9em;
         @include flexBox(column);
         .profile-name{
