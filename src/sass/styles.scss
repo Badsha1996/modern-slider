@@ -99,13 +99,28 @@ body{
     background-color: rgb(194, 194, 194);
     @include flexBox(row)
 }
+
+
+.container{
+  position: relative;
+  background-color: blue;
+}
 .content{
+  position: relative;
     margin: 0 2.1rem;
+}
+.content__card{
+  position: absolute;
+  top: -15rem;
+  left:-30rem;
+  @include flexBox(row)
+  
 }
 .card{
     width: 20rem;
     border-radius: 1.6rem;
     background-color: #fff;
+    margin: 1rem;
     &__image{
         row-gap: 0.2rem;
         position: relative;
