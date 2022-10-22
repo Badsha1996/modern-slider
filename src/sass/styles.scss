@@ -81,8 +81,8 @@ select {
 /* ============================================================ */
 // variable
 $ff: 'Poppins', sans-serif;
-$primary-clr: hsl(240, 97%, 65%);
-$primary-accent-clr: hsl(219, 100%, 73%);
+$primary-clr: hsl(290, 66%, 24%);
+$primary-accent-clr: hsl(283, 100%, 55%);
 
 * {
     font-family: $ff;
@@ -103,7 +103,8 @@ body {
 .container {
     max-width: 1120px;
     width: 100%;
-    background-color: grey;
+    background-color: #eee;
+
 }
 
 .content {
@@ -115,7 +116,7 @@ body {
 
 .card {
     border-radius: 1.6rem;
-    background-color: #fff;
+    background-color: rgb(52, 52, 52);
 
     &__image {
         row-gap: 0.2rem;
@@ -172,13 +173,13 @@ body {
         .profile-name {
             font-size: 1.2rem;
             font-weight: 500;
-            color: rgb(61, 36, 20);
+            color: #eee;
         }
         .description {
             text-align: center;
             font-size: 0.9rem;
             font-weight: 400;
-            color: black
+            color: #eee;
         }
         .button {
             background-color: $primary-accent-clr;
@@ -187,7 +188,7 @@ body {
             border: none;
             padding: 0.5em 1em;
             margin: 0.9rem;
-            border-radius: 0;
+            border-radius: 5rem;
             cursor: pointer;
             transition: all 0.5s ease-in-out;
             &:hover,
