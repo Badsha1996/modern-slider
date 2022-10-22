@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>modern-slider</title>
+    
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
 </head>
 <body>
-    <div class="container">
-
+    <div class="container swiper">
         <div class="content">
-            <div class="content__card">
-                <div class="card">
+            <div class="content__card swiper-wrapper">
+                <div class="card swiper-slide">
                     <div class="card__image">
                         <span class="card__image__overlay"></span>
                         <div class="card__image__container">
@@ -24,9 +26,9 @@
                         <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero facilis provident porro eaque explicabo enim, veniam veritatis reprehenderit fuga dolor voluptatem, ipsam voluptatibus, iste at et laudantium numquam iusto accusamus.</p>
                         <button class="button">View More</button>
                     </div>
-                </div> 
+                </div>  
 
-                <div class="card">
+                <div class="card swiper-slide">
                     <div class="card__image">
                         <span class="card__image__overlay"></span>
                         <div class="card__image__container">
@@ -34,13 +36,13 @@
                         </div>
                     </div>
                     <div class="card__content">
-                        <h2 class="profile-name">harry potter</h2>
+                        <h2 class="profile-name">Zoro</h2>
                         <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero facilis provident porro eaque explicabo enim, veniam veritatis reprehenderit fuga dolor voluptatem, ipsam voluptatibus, iste at et laudantium numquam iusto accusamus.</p>
                         <button class="button">View More</button>
                     </div>
-                </div> 
+                </div>  
 
-                <div class="card">
+                <div class="card swiper-slide">
                     <div class="card__image">
                         <span class="card__image__overlay"></span>
                         <div class="card__image__container">
@@ -48,15 +50,13 @@
                         </div>
                     </div>
                     <div class="card__content">
-                        <h2 class="profile-name">chota bheem</h2>
+                        <h2 class="profile-name">DR. Vega</h2>
                         <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero facilis provident porro eaque explicabo enim, veniam veritatis reprehenderit fuga dolor voluptatem, ipsam voluptatibus, iste at et laudantium numquam iusto accusamus.</p>
                         <button class="button">View More</button>
                     </div>
-                </div> 
-            </div>
+                </div>  
 
-            <div class="content__card">
-                <div class="card">
+                <div class="card swiper-slide">
                     <div class="card__image">
                         <span class="card__image__overlay"></span>
                         <div class="card__image__container">
@@ -64,13 +64,13 @@
                         </div>
                     </div>
                     <div class="card__content">
-                        <h2 class="profile-name">one piece</h2>
+                        <h2 class="profile-name">Roger</h2>
                         <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero facilis provident porro eaque explicabo enim, veniam veritatis reprehenderit fuga dolor voluptatem, ipsam voluptatibus, iste at et laudantium numquam iusto accusamus.</p>
                         <button class="button">View More</button>
                     </div>
-                </div> 
+                </div>  
 
-                <div class="card">
+                <div class="card swiper-slide">
                     <div class="card__image">
                         <span class="card__image__overlay"></span>
                         <div class="card__image__container">
@@ -78,13 +78,13 @@
                         </div>
                     </div>
                     <div class="card__content">
-                        <h2 class="profile-name">naruto</h2>
+                        <h2 class="profile-name">Monkey d luffy</h2>
                         <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero facilis provident porro eaque explicabo enim, veniam veritatis reprehenderit fuga dolor voluptatem, ipsam voluptatibus, iste at et laudantium numquam iusto accusamus.</p>
                         <button class="button">View More</button>
                     </div>
-                </div> 
+                </div>  
 
-                <div class="card">
+                <div class="card swiper-slide">
                     <div class="card__image">
                         <span class="card__image__overlay"></span>
                         <div class="card__image__container">
@@ -92,14 +92,20 @@
                         </div>
                     </div>
                     <div class="card__content">
-                        <h2 class="profile-name">bleach</h2>
+                        <h2 class="profile-name">Randy Troy</h2>
                         <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero facilis provident porro eaque explicabo enim, veniam veritatis reprehenderit fuga dolor voluptatem, ipsam voluptatibus, iste at et laudantium numquam iusto accusamus.</p>
                         <button class="button">View More</button>
                     </div>
-                </div> 
+                </div>  
             </div>
-
         </div>
-    </div>   
+
+            <div class="swiper-button-next swiper-navBtn"><i class="fas fa-chevron-right right" id="arrow" ></i>  </div>
+            <div class="swiper-button-prev swiper-navBtn"><i class="fas fa-chevron-left left" id="arrow" ></i>  </div>
+            <div class="swiper-pagination"></div>
+    </div> 
+
+    <script src="./main/swiper-bundle.min.js"></script>
+    <script src="./main/main.js"></script>
 </body>
 </html>
